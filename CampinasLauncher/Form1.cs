@@ -12,7 +12,7 @@ namespace CampinasLauncher
 {
     public partial class Form1 : Form
     {
-        //lib rp = new lib();
+        //lib rp = new lib(); Verificar
 
         //Global variables for Moving a Borderless Form
         private bool dragging = false;
