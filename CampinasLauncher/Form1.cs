@@ -17,12 +17,13 @@ namespace CampinasLauncher
         //Global variables for Moving a Borderless Form
         Point lastPoint;
 
+        //Variavel sombra
         private const int CS_DropShadown = 0x00020000;
 
         //Versões Alterações
-        string assemblyVersion = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString();
-        string fileVersion = System.Diagnostics.FileVersionInfo.GetVersionInfo(System.Reflection.Assembly.GetExecutingAssembly().Location).FileVersion;
-        string productVersion = System.Diagnostics.FileVersionInfo.GetVersionInfo(System.Reflection.Assembly.GetExecutingAssembly().Location).ProductVersion;
+        readonly string assemblyVersion = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString();
+        //readonly string fileVersion = System.Diagnostics.FileVersionInfo.GetVersionInfo(System.Reflection.Assembly.GetExecutingAssembly().Location).FileVersion;
+        //readonly string productVersion = System.Diagnostics.FileVersionInfo.GetVersionInfo(System.Reflection.Assembly.GetExecutingAssembly().Location).ProductVersion;
 
         public Form1()
         {
