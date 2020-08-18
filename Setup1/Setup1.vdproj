@@ -28,12 +28,6 @@
         "Entry"
         {
         "MsmKey" = "8:_A95FA508FABED99F92DBD66DD72AC56B"
-        "OwnerKey" = "8:_EB9B1D2B8198EEFF98824121495D7591"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_A95FA508FABED99F92DBD66DD72AC56B"
         "OwnerKey" = "8:_D18A956D6145A3786FBC6095AEB5FB7B"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -41,6 +35,12 @@
         {
         "MsmKey" = "8:_A95FA508FABED99F92DBD66DD72AC56B"
         "OwnerKey" = "8:_09B5D901B78241DB84578A6D5758DE69"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_A95FA508FABED99F92DBD66DD72AC56B"
+        "OwnerKey" = "8:_EB9B1D2B8198EEFF98824121495D7591"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -64,12 +64,6 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_D18A956D6145A3786FBC6095AEB5FB7B"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_09B5D901B78241DB84578A6D5758DE69"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -77,6 +71,12 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_EB9B1D2B8198EEFF98824121495D7591"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_D18A956D6145A3786FBC6095AEB5FB7B"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -135,6 +135,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
     }
     "Deployable"
@@ -351,7 +359,7 @@
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:"
         "ARPURLINFOABOUT" = "8:"
-        "ARPPRODUCTICON" = "8:"
+        "ARPPRODUCTICON" = "8:_9C2F24F749474644BD251378232E6FCE"
         "ARPIconIndex" = "3:0"
         "SearchPath" = "8:"
         "UseSystemSearchPath" = "11:TRUE"
