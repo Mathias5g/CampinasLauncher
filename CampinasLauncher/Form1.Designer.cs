@@ -30,17 +30,20 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnChangelog = new System.Windows.Forms.Button();
-            this.btnTeamspeak = new System.Windows.Forms.Button();
-            this.btnEntrar = new System.Windows.Forms.Button();
-            this.btnYoutube = new System.Windows.Forms.Button();
-            this.btnInstagram = new System.Windows.Forms.Button();
-            this.btnFacebook = new System.Windows.Forms.Button();
-            this.btnDiscord = new System.Windows.Forms.Button();
+            this.BtnChangelog = new System.Windows.Forms.Button();
+            this.BtnTeamspeak = new System.Windows.Forms.Button();
+            this.BtnEntrar = new System.Windows.Forms.Button();
+            this.BtnYoutube = new System.Windows.Forms.Button();
+            this.BtnInstagram = new System.Windows.Forms.Button();
+            this.BtnFacebook = new System.Windows.Forms.Button();
+            this.BtnDiscord = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnClose = new System.Windows.Forms.Button();
+            this.BtnClose = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.BtnMinimize = new System.Windows.Forms.Button();
+            this.LblVersion = new System.Windows.Forms.Label();
+            this.LblVersionNumber = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -48,13 +51,15 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.btnChangelog);
-            this.panel1.Controls.Add(this.btnTeamspeak);
-            this.panel1.Controls.Add(this.btnEntrar);
-            this.panel1.Controls.Add(this.btnYoutube);
-            this.panel1.Controls.Add(this.btnInstagram);
-            this.panel1.Controls.Add(this.btnFacebook);
-            this.panel1.Controls.Add(this.btnDiscord);
+            this.panel1.Controls.Add(this.LblVersionNumber);
+            this.panel1.Controls.Add(this.LblVersion);
+            this.panel1.Controls.Add(this.BtnChangelog);
+            this.panel1.Controls.Add(this.BtnTeamspeak);
+            this.panel1.Controls.Add(this.BtnEntrar);
+            this.panel1.Controls.Add(this.BtnYoutube);
+            this.panel1.Controls.Add(this.BtnInstagram);
+            this.panel1.Controls.Add(this.BtnFacebook);
+            this.panel1.Controls.Add(this.BtnDiscord);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -62,125 +67,125 @@
             this.panel1.Size = new System.Drawing.Size(200, 450);
             this.panel1.TabIndex = 0;
             // 
-            // btnChangelog
+            // BtnChangelog
             // 
-            this.btnChangelog.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnChangelog.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnChangelog.FlatAppearance.BorderSize = 2;
-            this.btnChangelog.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnChangelog.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChangelog.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnChangelog.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnChangelog.Location = new System.Drawing.Point(11, 257);
-            this.btnChangelog.Name = "btnChangelog";
-            this.btnChangelog.Size = new System.Drawing.Size(176, 40);
-            this.btnChangelog.TabIndex = 8;
-            this.btnChangelog.Text = "CHANGELOG";
-            this.btnChangelog.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnChangelog.UseVisualStyleBackColor = true;
+            this.BtnChangelog.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BtnChangelog.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnChangelog.FlatAppearance.BorderSize = 2;
+            this.BtnChangelog.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnChangelog.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnChangelog.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.BtnChangelog.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnChangelog.Location = new System.Drawing.Point(11, 257);
+            this.BtnChangelog.Name = "BtnChangelog";
+            this.BtnChangelog.Size = new System.Drawing.Size(176, 40);
+            this.BtnChangelog.TabIndex = 8;
+            this.BtnChangelog.Text = "CHANGELOG";
+            this.BtnChangelog.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.BtnChangelog.UseVisualStyleBackColor = true;
             // 
-            // btnTeamspeak
+            // BtnTeamspeak
             // 
-            this.btnTeamspeak.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnTeamspeak.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnTeamspeak.FlatAppearance.BorderSize = 2;
-            this.btnTeamspeak.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTeamspeak.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTeamspeak.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnTeamspeak.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnTeamspeak.Location = new System.Drawing.Point(11, 208);
-            this.btnTeamspeak.Name = "btnTeamspeak";
-            this.btnTeamspeak.Size = new System.Drawing.Size(176, 40);
-            this.btnTeamspeak.TabIndex = 7;
-            this.btnTeamspeak.Text = "TEAMSPEAK 3";
-            this.btnTeamspeak.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnTeamspeak.UseVisualStyleBackColor = true;
-            this.btnTeamspeak.Click += new System.EventHandler(this.BtnTeamspeak_Click);
+            this.BtnTeamspeak.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BtnTeamspeak.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnTeamspeak.FlatAppearance.BorderSize = 2;
+            this.BtnTeamspeak.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnTeamspeak.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnTeamspeak.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.BtnTeamspeak.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnTeamspeak.Location = new System.Drawing.Point(11, 208);
+            this.BtnTeamspeak.Name = "BtnTeamspeak";
+            this.BtnTeamspeak.Size = new System.Drawing.Size(176, 40);
+            this.BtnTeamspeak.TabIndex = 7;
+            this.BtnTeamspeak.Text = "TEAMSPEAK 3";
+            this.BtnTeamspeak.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.BtnTeamspeak.UseVisualStyleBackColor = true;
+            this.BtnTeamspeak.Click += new System.EventHandler(this.BtnTeamspeak_Click);
             // 
-            // btnEntrar
+            // BtnEntrar
             // 
-            this.btnEntrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnEntrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEntrar.FlatAppearance.BorderSize = 2;
-            this.btnEntrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEntrar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEntrar.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnEntrar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEntrar.Location = new System.Drawing.Point(10, 159);
-            this.btnEntrar.Name = "btnEntrar";
-            this.btnEntrar.Size = new System.Drawing.Size(176, 40);
-            this.btnEntrar.TabIndex = 6;
-            this.btnEntrar.Text = "ENTRAR";
-            this.btnEntrar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnEntrar.UseVisualStyleBackColor = true;
+            this.BtnEntrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BtnEntrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnEntrar.FlatAppearance.BorderSize = 2;
+            this.BtnEntrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnEntrar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnEntrar.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.BtnEntrar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnEntrar.Location = new System.Drawing.Point(10, 159);
+            this.BtnEntrar.Name = "BtnEntrar";
+            this.BtnEntrar.Size = new System.Drawing.Size(176, 40);
+            this.BtnEntrar.TabIndex = 6;
+            this.BtnEntrar.Text = "ENTRAR";
+            this.BtnEntrar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.BtnEntrar.UseVisualStyleBackColor = true;
             // 
-            // btnYoutube
+            // BtnYoutube
             // 
-            this.btnYoutube.BackColor = System.Drawing.Color.Transparent;
-            this.btnYoutube.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnYoutube.FlatAppearance.BorderSize = 0;
-            this.btnYoutube.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.btnYoutube.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnYoutube.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnYoutube.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnYoutube.Image = ((System.Drawing.Image)(resources.GetObject("btnYoutube.Image")));
-            this.btnYoutube.Location = new System.Drawing.Point(147, 401);
-            this.btnYoutube.Name = "btnYoutube";
-            this.btnYoutube.Size = new System.Drawing.Size(36, 36);
-            this.btnYoutube.TabIndex = 5;
-            this.btnYoutube.UseVisualStyleBackColor = false;
-            this.btnYoutube.Click += new System.EventHandler(this.BtnYoutube_Click);
+            this.BtnYoutube.BackColor = System.Drawing.Color.Transparent;
+            this.BtnYoutube.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnYoutube.FlatAppearance.BorderSize = 0;
+            this.BtnYoutube.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.BtnYoutube.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.BtnYoutube.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.BtnYoutube.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnYoutube.Image = ((System.Drawing.Image)(resources.GetObject("BtnYoutube.Image")));
+            this.BtnYoutube.Location = new System.Drawing.Point(147, 376);
+            this.BtnYoutube.Name = "BtnYoutube";
+            this.BtnYoutube.Size = new System.Drawing.Size(36, 36);
+            this.BtnYoutube.TabIndex = 5;
+            this.BtnYoutube.UseVisualStyleBackColor = false;
+            this.BtnYoutube.Click += new System.EventHandler(this.BtnYoutube_Click);
             // 
-            // btnInstagram
+            // BtnInstagram
             // 
-            this.btnInstagram.BackColor = System.Drawing.Color.Transparent;
-            this.btnInstagram.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnInstagram.FlatAppearance.BorderSize = 0;
-            this.btnInstagram.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.btnInstagram.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnInstagram.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnInstagram.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInstagram.Image = ((System.Drawing.Image)(resources.GetObject("btnInstagram.Image")));
-            this.btnInstagram.Location = new System.Drawing.Point(102, 401);
-            this.btnInstagram.Name = "btnInstagram";
-            this.btnInstagram.Size = new System.Drawing.Size(36, 36);
-            this.btnInstagram.TabIndex = 4;
-            this.btnInstagram.UseVisualStyleBackColor = false;
-            this.btnInstagram.Click += new System.EventHandler(this.BtnInstagram_Click);
+            this.BtnInstagram.BackColor = System.Drawing.Color.Transparent;
+            this.BtnInstagram.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnInstagram.FlatAppearance.BorderSize = 0;
+            this.BtnInstagram.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.BtnInstagram.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.BtnInstagram.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.BtnInstagram.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnInstagram.Image = ((System.Drawing.Image)(resources.GetObject("BtnInstagram.Image")));
+            this.BtnInstagram.Location = new System.Drawing.Point(102, 376);
+            this.BtnInstagram.Name = "BtnInstagram";
+            this.BtnInstagram.Size = new System.Drawing.Size(36, 36);
+            this.BtnInstagram.TabIndex = 4;
+            this.BtnInstagram.UseVisualStyleBackColor = false;
+            this.BtnInstagram.Click += new System.EventHandler(this.BtnInstagram_Click);
             // 
-            // btnFacebook
+            // BtnFacebook
             // 
-            this.btnFacebook.BackColor = System.Drawing.Color.Transparent;
-            this.btnFacebook.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnFacebook.FlatAppearance.BorderSize = 0;
-            this.btnFacebook.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.btnFacebook.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnFacebook.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnFacebook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFacebook.Image = ((System.Drawing.Image)(resources.GetObject("btnFacebook.Image")));
-            this.btnFacebook.Location = new System.Drawing.Point(57, 401);
-            this.btnFacebook.Name = "btnFacebook";
-            this.btnFacebook.Size = new System.Drawing.Size(36, 36);
-            this.btnFacebook.TabIndex = 3;
-            this.btnFacebook.UseVisualStyleBackColor = false;
-            this.btnFacebook.Click += new System.EventHandler(this.BtnFacebook_Click);
+            this.BtnFacebook.BackColor = System.Drawing.Color.Transparent;
+            this.BtnFacebook.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnFacebook.FlatAppearance.BorderSize = 0;
+            this.BtnFacebook.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.BtnFacebook.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.BtnFacebook.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.BtnFacebook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnFacebook.Image = ((System.Drawing.Image)(resources.GetObject("BtnFacebook.Image")));
+            this.BtnFacebook.Location = new System.Drawing.Point(57, 376);
+            this.BtnFacebook.Name = "BtnFacebook";
+            this.BtnFacebook.Size = new System.Drawing.Size(36, 36);
+            this.BtnFacebook.TabIndex = 3;
+            this.BtnFacebook.UseVisualStyleBackColor = false;
+            this.BtnFacebook.Click += new System.EventHandler(this.BtnFacebook_Click);
             // 
-            // btnDiscord
+            // BtnDiscord
             // 
-            this.btnDiscord.BackColor = System.Drawing.Color.Transparent;
-            this.btnDiscord.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDiscord.FlatAppearance.BorderSize = 0;
-            this.btnDiscord.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.btnDiscord.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnDiscord.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnDiscord.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDiscord.Image = ((System.Drawing.Image)(resources.GetObject("btnDiscord.Image")));
-            this.btnDiscord.Location = new System.Drawing.Point(13, 401);
-            this.btnDiscord.Name = "btnDiscord";
-            this.btnDiscord.Size = new System.Drawing.Size(36, 36);
-            this.btnDiscord.TabIndex = 2;
-            this.btnDiscord.UseVisualStyleBackColor = false;
-            this.btnDiscord.Click += new System.EventHandler(this.BtnDiscord_Click);
+            this.BtnDiscord.BackColor = System.Drawing.Color.Transparent;
+            this.BtnDiscord.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnDiscord.FlatAppearance.BorderSize = 0;
+            this.BtnDiscord.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.BtnDiscord.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.BtnDiscord.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.BtnDiscord.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnDiscord.Image = ((System.Drawing.Image)(resources.GetObject("BtnDiscord.Image")));
+            this.BtnDiscord.Location = new System.Drawing.Point(13, 376);
+            this.BtnDiscord.Name = "BtnDiscord";
+            this.BtnDiscord.Size = new System.Drawing.Size(36, 36);
+            this.BtnDiscord.TabIndex = 2;
+            this.BtnDiscord.UseVisualStyleBackColor = false;
+            this.BtnDiscord.Click += new System.EventHandler(this.BtnDiscord_Click);
             // 
             // panel2
             // 
@@ -204,34 +209,71 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // btnClose
+            // BtnClose
             // 
-            this.btnClose.BackColor = System.Drawing.Color.Transparent;
-            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnClose.FlatAppearance.BorderSize = 0;
-            this.btnClose.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.btnClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
-            this.btnClose.Location = new System.Drawing.Point(759, 3);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(36, 36);
-            this.btnClose.TabIndex = 1;
-            this.btnClose.UseVisualStyleBackColor = false;
-            this.btnClose.Click += new System.EventHandler(this.BtnClose_Click);
+            this.BtnClose.BackColor = System.Drawing.Color.Transparent;
+            this.BtnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BtnClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnClose.FlatAppearance.BorderSize = 0;
+            this.BtnClose.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.BtnClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.BtnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.BtnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnClose.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.BtnClose.Image = ((System.Drawing.Image)(resources.GetObject("BtnClose.Image")));
+            this.BtnClose.Location = new System.Drawing.Point(759, 3);
+            this.BtnClose.Name = "BtnClose";
+            this.BtnClose.Size = new System.Drawing.Size(36, 36);
+            this.BtnClose.TabIndex = 1;
+            this.BtnClose.UseVisualStyleBackColor = false;
+            this.BtnClose.Click += new System.EventHandler(this.BtnClose_Click);
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Transparent;
             this.panel3.Location = new System.Drawing.Point(201, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(558, 39);
+            this.panel3.Size = new System.Drawing.Size(510, 39);
             this.panel3.TabIndex = 2;
             this.panel3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
             this.panel3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
+            // 
+            // BtnMinimize
+            // 
+            this.BtnMinimize.BackColor = System.Drawing.Color.Transparent;
+            this.BtnMinimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BtnMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnMinimize.FlatAppearance.BorderSize = 0;
+            this.BtnMinimize.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.BtnMinimize.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.BtnMinimize.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.BtnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnMinimize.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.BtnMinimize.Image = ((System.Drawing.Image)(resources.GetObject("BtnMinimize.Image")));
+            this.BtnMinimize.Location = new System.Drawing.Point(717, 3);
+            this.BtnMinimize.Name = "BtnMinimize";
+            this.BtnMinimize.Size = new System.Drawing.Size(36, 36);
+            this.BtnMinimize.TabIndex = 3;
+            this.BtnMinimize.UseVisualStyleBackColor = false;
+            this.BtnMinimize.Click += new System.EventHandler(this.BtnMinimize_Click);
+            // 
+            // LblVersion
+            // 
+            this.LblVersion.AutoSize = true;
+            this.LblVersion.Location = new System.Drawing.Point(104, 425);
+            this.LblVersion.Name = "LblVersion";
+            this.LblVersion.Size = new System.Drawing.Size(41, 13);
+            this.LblVersion.TabIndex = 9;
+            this.LblVersion.Text = "Versão";
+            // 
+            // LblVersionNumber
+            // 
+            this.LblVersionNumber.AutoSize = true;
+            this.LblVersionNumber.Location = new System.Drawing.Point(144, 425);
+            this.LblVersionNumber.Name = "LblVersionNumber";
+            this.LblVersionNumber.Size = new System.Drawing.Size(38, 13);
+            this.LblVersionNumber.TabIndex = 10;
+            this.LblVersionNumber.Text = "label1";
             // 
             // Form1
             // 
@@ -240,8 +282,9 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.BtnMinimize);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.btnClose);
+            this.Controls.Add(this.BtnClose);
             this.Controls.Add(this.panel1);
             this.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -252,6 +295,7 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -261,17 +305,20 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnDiscord;
+        private System.Windows.Forms.Button BtnDiscord;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button btnYoutube;
-        private System.Windows.Forms.Button btnInstagram;
-        private System.Windows.Forms.Button btnFacebook;
-        private System.Windows.Forms.Button btnChangelog;
-        private System.Windows.Forms.Button btnTeamspeak;
-        private System.Windows.Forms.Button btnEntrar;
-        private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Button BtnYoutube;
+        private System.Windows.Forms.Button BtnInstagram;
+        private System.Windows.Forms.Button BtnFacebook;
+        private System.Windows.Forms.Button BtnChangelog;
+        private System.Windows.Forms.Button BtnTeamspeak;
+        private System.Windows.Forms.Button BtnEntrar;
+        private System.Windows.Forms.Button BtnClose;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button BtnMinimize;
+        private System.Windows.Forms.Label LblVersionNumber;
+        private System.Windows.Forms.Label LblVersion;
     }
 }
 

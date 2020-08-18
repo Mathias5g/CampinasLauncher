@@ -19,6 +19,11 @@ namespace CampinasLauncher
 
         private const int CS_DropShadown = 0x00020000;
 
+        //Versões Alterações
+        string assemblyVersion = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString();
+        string fileVersion = System.Diagnostics.FileVersionInfo.GetVersionInfo(System.Reflection.Assembly.GetExecutingAssembly().Location).FileVersion;
+        string productVersion = System.Diagnostics.FileVersionInfo.GetVersionInfo(System.Reflection.Assembly.GetExecutingAssembly().Location).ProductVersion;
+
         public Form1()
         {
             InitializeComponent();
@@ -27,6 +32,10 @@ namespace CampinasLauncher
 
         private void Form1_Load(object sender, EventArgs e)
         {
+
+
+            LblVersionNumber.Text = assemblyVersion;
+
             Lang.steamhata = "Abra a Steam primeiro"; //Please firt of open steam.
             Lang.hatalimesajbaslik = "Erro!"; //Error Header Message
             Lang.muzikhata = "Música não encontrada"; //Play Music Not Found Error.
@@ -92,5 +101,9 @@ namespace CampinasLauncher
             //System.Diagnostics.Process.Start("https://www.teamspeak.com/pt/downloads/");
         }
 
+        private void BtnMinimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }
