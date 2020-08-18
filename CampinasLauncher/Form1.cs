@@ -6,17 +6,18 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-//using fivemLuncher;
+using fivemLuncher;
 
 namespace CampinasLauncher
 {
     public partial class Form1 : Form
     {
-        //lib rp = new lib(); Verificar
+        lib rp = new lib();
 
         //Global variables for Moving a Borderless Form
-        private bool dragging = false;
-        private Point startPoint = new Point(0, 0);
+        Point lastPoint;
+
+        private const int CS_DropShadown = 0x00020000;
 
         public Form1()
         {
@@ -24,30 +25,72 @@ namespace CampinasLauncher
             FormBorderStyle = FormBorderStyle.None;
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Lang.steamhata = "Abra a Steam primeiro"; //Please firt of open steam.
+            Lang.hatalimesajbaslik = "Erro!"; //Error Header Message
+            Lang.muzikhata = "Música não encontrada"; //Play Music Not Found Error.
+            Lang.panelhata = "Erro no painel"; //Panel System ERROR
+            Lang.steam64idgirinhatasi = "Erro na SteamID"; // Steamid errorr
+            Lang.cokfazlaistekhatasi = "6"; //To Much Post Request error.
+            Lang.uygulamaacmahatasi = "Erro ao abrir"; //Open Command error
+            Lang.internethatasi = "Sem conexão com a internet"; //Internet Connection Errror.
+        }
+
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams cp = base.CreateParams;
+                cp.ClassStyle |= CS_DropShadown;
+                return cp;
+            }
+        }
+
+        private void BtnClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
         private void Form1_MouseMove(object sender, MouseEventArgs e)
         {
-            if (dragging)
+            if (e.Button == MouseButtons.Left)
             {
-                Point p = PointToScreen(e.Location);
-                Location = new Point(p.X - this.startPoint.X, p.Y - this.startPoint.Y);
-
+                this.Left += e.X - lastPoint.X;
+                this.Top += e.Y - lastPoint.Y;
             }
         }
 
         private void Form1_MouseDown(object sender, MouseEventArgs e)
         {
-            dragging = true;
-            startPoint = new Point(e.X, e.Y);
+            lastPoint = new Point(e.X, e.Y);
         }
 
-        private void Form1_MouseUp(object sender, MouseEventArgs e)
+        private void BtnDiscord_Click(object sender, EventArgs e)
         {
-            dragging = false;
+            System.Diagnostics.Process.Start("https://discord.gg/KYXPdQ");
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
+        private void BtnFacebook_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            System.Diagnostics.Process.Start("https://www.facebook.com/");
         }
+
+        private void BtnInstagram_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.instagram.com/");
+        }
+
+        private void BtnYoutube_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.youtube.com/");
+        }
+
+        private void BtnTeamspeak_Click(object sender, EventArgs e)
+        {
+            rp.ts3open("localhost:1111");
+            //System.Diagnostics.Process.Start("https://www.teamspeak.com/pt/downloads/");
+        }
+
     }
 }

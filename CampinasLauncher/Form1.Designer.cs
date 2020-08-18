@@ -38,8 +38,12 @@
             this.btnFacebook = new System.Windows.Forms.Button();
             this.btnDiscord = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnClose = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -55,7 +59,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(199, 450);
+            this.panel1.Size = new System.Drawing.Size(200, 450);
             this.panel1.TabIndex = 0;
             // 
             // btnChangelog
@@ -91,6 +95,7 @@
             this.btnTeamspeak.Text = "TEAMSPEAK 3";
             this.btnTeamspeak.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnTeamspeak.UseVisualStyleBackColor = true;
+            this.btnTeamspeak.Click += new System.EventHandler(this.BtnTeamspeak_Click);
             // 
             // btnEntrar
             // 
@@ -124,6 +129,7 @@
             this.btnYoutube.Size = new System.Drawing.Size(36, 36);
             this.btnYoutube.TabIndex = 5;
             this.btnYoutube.UseVisualStyleBackColor = false;
+            this.btnYoutube.Click += new System.EventHandler(this.BtnYoutube_Click);
             // 
             // btnInstagram
             // 
@@ -140,6 +146,7 @@
             this.btnInstagram.Size = new System.Drawing.Size(36, 36);
             this.btnInstagram.TabIndex = 4;
             this.btnInstagram.UseVisualStyleBackColor = false;
+            this.btnInstagram.Click += new System.EventHandler(this.BtnInstagram_Click);
             // 
             // btnFacebook
             // 
@@ -156,6 +163,7 @@
             this.btnFacebook.Size = new System.Drawing.Size(36, 36);
             this.btnFacebook.TabIndex = 3;
             this.btnFacebook.UseVisualStyleBackColor = false;
+            this.btnFacebook.Click += new System.EventHandler(this.BtnFacebook_Click);
             // 
             // btnDiscord
             // 
@@ -172,17 +180,29 @@
             this.btnDiscord.Size = new System.Drawing.Size(36, 36);
             this.btnDiscord.TabIndex = 2;
             this.btnDiscord.UseVisualStyleBackColor = false;
+            this.btnDiscord.Click += new System.EventHandler(this.BtnDiscord_Click);
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(55)))));
-            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel2.Location = new System.Drawing.Point(0, 9);
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(0);
             this.panel2.Name = "panel2";
-            this.panel2.Padding = new System.Windows.Forms.Padding(10);
-            this.panel2.Size = new System.Drawing.Size(199, 103);
+            this.panel2.Size = new System.Drawing.Size(200, 103);
             this.panel2.TabIndex = 1;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(200, 78);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // btnClose
             // 
@@ -201,7 +221,17 @@
             this.btnClose.Size = new System.Drawing.Size(36, 36);
             this.btnClose.TabIndex = 1;
             this.btnClose.UseVisualStyleBackColor = false;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            this.btnClose.Click += new System.EventHandler(this.BtnClose_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Transparent;
+            this.panel3.Location = new System.Drawing.Point(201, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(558, 39);
+            this.panel3.TabIndex = 2;
+            this.panel3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.panel3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // Form1
             // 
@@ -210,6 +240,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.panel1);
             this.Cursor = System.Windows.Forms.Cursors.Arrow;
@@ -219,10 +250,10 @@
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
-            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
-            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
-            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseUp);
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -239,6 +270,8 @@
         private System.Windows.Forms.Button btnTeamspeak;
         private System.Windows.Forms.Button btnEntrar;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
