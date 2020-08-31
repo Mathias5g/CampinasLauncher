@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.LblVersionNumber = new System.Windows.Forms.Label();
+            this.LblVersion = new System.Windows.Forms.Label();
             this.BtnChangelog = new System.Windows.Forms.Button();
             this.BtnTeamspeak = new System.Windows.Forms.Button();
             this.BtnEntrar = new System.Windows.Forms.Button();
@@ -42,8 +44,7 @@
             this.BtnClose = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.BtnMinimize = new System.Windows.Forms.Button();
-            this.LblVersion = new System.Windows.Forms.Label();
-            this.LblVersionNumber = new System.Windows.Forms.Label();
+            this.BtnLimpar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -51,6 +52,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.BtnLimpar);
             this.panel1.Controls.Add(this.LblVersionNumber);
             this.panel1.Controls.Add(this.LblVersion);
             this.panel1.Controls.Add(this.BtnChangelog);
@@ -67,6 +69,24 @@
             this.panel1.Size = new System.Drawing.Size(200, 450);
             this.panel1.TabIndex = 0;
             // 
+            // LblVersionNumber
+            // 
+            this.LblVersionNumber.AutoSize = true;
+            this.LblVersionNumber.Location = new System.Drawing.Point(134, 425);
+            this.LblVersionNumber.Name = "LblVersionNumber";
+            this.LblVersionNumber.Size = new System.Drawing.Size(38, 13);
+            this.LblVersionNumber.TabIndex = 10;
+            this.LblVersionNumber.Text = "label1";
+            // 
+            // LblVersion
+            // 
+            this.LblVersion.AutoSize = true;
+            this.LblVersion.Location = new System.Drawing.Point(94, 425);
+            this.LblVersion.Name = "LblVersion";
+            this.LblVersion.Size = new System.Drawing.Size(41, 13);
+            this.LblVersion.TabIndex = 9;
+            this.LblVersion.Text = "Versão";
+            // 
             // BtnChangelog
             // 
             this.BtnChangelog.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
@@ -76,7 +96,7 @@
             this.BtnChangelog.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnChangelog.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.BtnChangelog.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnChangelog.Location = new System.Drawing.Point(11, 257);
+            this.BtnChangelog.Location = new System.Drawing.Point(11, 247);
             this.BtnChangelog.Name = "BtnChangelog";
             this.BtnChangelog.Size = new System.Drawing.Size(176, 40);
             this.BtnChangelog.TabIndex = 8;
@@ -93,14 +113,13 @@
             this.BtnTeamspeak.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnTeamspeak.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.BtnTeamspeak.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnTeamspeak.Location = new System.Drawing.Point(11, 208);
+            this.BtnTeamspeak.Location = new System.Drawing.Point(11, 198);
             this.BtnTeamspeak.Name = "BtnTeamspeak";
             this.BtnTeamspeak.Size = new System.Drawing.Size(176, 40);
             this.BtnTeamspeak.TabIndex = 7;
             this.BtnTeamspeak.Text = "TEAMSPEAK 3";
             this.BtnTeamspeak.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.BtnTeamspeak.UseVisualStyleBackColor = true;
-            this.BtnTeamspeak.Click += new System.EventHandler(this.BtnTeamspeak_Click);
             // 
             // BtnEntrar
             // 
@@ -111,7 +130,7 @@
             this.BtnEntrar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnEntrar.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.BtnEntrar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnEntrar.Location = new System.Drawing.Point(10, 159);
+            this.BtnEntrar.Location = new System.Drawing.Point(10, 149);
             this.BtnEntrar.Name = "BtnEntrar";
             this.BtnEntrar.Size = new System.Drawing.Size(176, 40);
             this.BtnEntrar.TabIndex = 6;
@@ -231,9 +250,9 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Transparent;
-            this.panel3.Location = new System.Drawing.Point(201, 0);
+            this.panel3.Location = new System.Drawing.Point(203, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(510, 39);
+            this.panel3.Size = new System.Drawing.Size(514, 39);
             this.panel3.TabIndex = 2;
             this.panel3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
             this.panel3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
@@ -257,23 +276,23 @@
             this.BtnMinimize.UseVisualStyleBackColor = false;
             this.BtnMinimize.Click += new System.EventHandler(this.BtnMinimize_Click);
             // 
-            // LblVersion
+            // BtnLimpar
             // 
-            this.LblVersion.AutoSize = true;
-            this.LblVersion.Location = new System.Drawing.Point(104, 425);
-            this.LblVersion.Name = "LblVersion";
-            this.LblVersion.Size = new System.Drawing.Size(41, 13);
-            this.LblVersion.TabIndex = 9;
-            this.LblVersion.Text = "Versão";
-            // 
-            // LblVersionNumber
-            // 
-            this.LblVersionNumber.AutoSize = true;
-            this.LblVersionNumber.Location = new System.Drawing.Point(144, 425);
-            this.LblVersionNumber.Name = "LblVersionNumber";
-            this.LblVersionNumber.Size = new System.Drawing.Size(38, 13);
-            this.LblVersionNumber.TabIndex = 10;
-            this.LblVersionNumber.Text = "label1";
+            this.BtnLimpar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BtnLimpar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnLimpar.FlatAppearance.BorderSize = 2;
+            this.BtnLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnLimpar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnLimpar.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.BtnLimpar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnLimpar.Location = new System.Drawing.Point(12, 296);
+            this.BtnLimpar.Name = "BtnLimpar";
+            this.BtnLimpar.Size = new System.Drawing.Size(176, 40);
+            this.BtnLimpar.TabIndex = 11;
+            this.BtnLimpar.Text = "LIMPAR CACHE";
+            this.BtnLimpar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.BtnLimpar.UseVisualStyleBackColor = true;
+            this.BtnLimpar.Click += new System.EventHandler(this.BtnLimpar_Click);
             // 
             // Form1
             // 
@@ -319,6 +338,7 @@
         private System.Windows.Forms.Button BtnMinimize;
         private System.Windows.Forms.Label LblVersionNumber;
         private System.Windows.Forms.Label LblVersion;
+        private System.Windows.Forms.Button BtnLimpar;
     }
 }
 
