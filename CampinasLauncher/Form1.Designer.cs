@@ -155,6 +155,7 @@
             this.BtnEntrar.Text = "ENTRAR";
             this.BtnEntrar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.BtnEntrar.UseVisualStyleBackColor = true;
+            this.BtnEntrar.Click += new System.EventHandler(this.BtnEntrar_Click);
             // 
             // BtnYoutube
             // 
