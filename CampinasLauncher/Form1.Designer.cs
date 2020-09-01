@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.BtnLimpar = new System.Windows.Forms.Button();
             this.LblVersionNumber = new System.Windows.Forms.Label();
             this.LblVersion = new System.Windows.Forms.Label();
             this.BtnChangelog = new System.Windows.Forms.Button();
@@ -44,7 +45,6 @@
             this.BtnClose = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.BtnMinimize = new System.Windows.Forms.Button();
-            this.BtnLimpar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -69,10 +69,28 @@
             this.panel1.Size = new System.Drawing.Size(200, 450);
             this.panel1.TabIndex = 0;
             // 
+            // BtnLimpar
+            // 
+            this.BtnLimpar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BtnLimpar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnLimpar.FlatAppearance.BorderSize = 2;
+            this.BtnLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnLimpar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnLimpar.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.BtnLimpar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnLimpar.Location = new System.Drawing.Point(12, 296);
+            this.BtnLimpar.Name = "BtnLimpar";
+            this.BtnLimpar.Size = new System.Drawing.Size(176, 40);
+            this.BtnLimpar.TabIndex = 11;
+            this.BtnLimpar.Text = "LIMPAR CACHE";
+            this.BtnLimpar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.BtnLimpar.UseVisualStyleBackColor = true;
+            this.BtnLimpar.Click += new System.EventHandler(this.BtnLimpar_Click);
+            // 
             // LblVersionNumber
             // 
             this.LblVersionNumber.AutoSize = true;
-            this.LblVersionNumber.Location = new System.Drawing.Point(134, 425);
+            this.LblVersionNumber.Location = new System.Drawing.Point(134, 428);
             this.LblVersionNumber.Name = "LblVersionNumber";
             this.LblVersionNumber.Size = new System.Drawing.Size(38, 13);
             this.LblVersionNumber.TabIndex = 10;
@@ -81,7 +99,7 @@
             // LblVersion
             // 
             this.LblVersion.AutoSize = true;
-            this.LblVersion.Location = new System.Drawing.Point(94, 425);
+            this.LblVersion.Location = new System.Drawing.Point(94, 428);
             this.LblVersion.Name = "LblVersion";
             this.LblVersion.Size = new System.Drawing.Size(41, 13);
             this.LblVersion.TabIndex = 9;
@@ -148,7 +166,7 @@
             this.BtnYoutube.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.BtnYoutube.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnYoutube.Image = ((System.Drawing.Image)(resources.GetObject("BtnYoutube.Image")));
-            this.BtnYoutube.Location = new System.Drawing.Point(147, 376);
+            this.BtnYoutube.Location = new System.Drawing.Point(147, 379);
             this.BtnYoutube.Name = "BtnYoutube";
             this.BtnYoutube.Size = new System.Drawing.Size(36, 36);
             this.BtnYoutube.TabIndex = 5;
@@ -165,7 +183,7 @@
             this.BtnInstagram.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.BtnInstagram.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnInstagram.Image = ((System.Drawing.Image)(resources.GetObject("BtnInstagram.Image")));
-            this.BtnInstagram.Location = new System.Drawing.Point(102, 376);
+            this.BtnInstagram.Location = new System.Drawing.Point(102, 379);
             this.BtnInstagram.Name = "BtnInstagram";
             this.BtnInstagram.Size = new System.Drawing.Size(36, 36);
             this.BtnInstagram.TabIndex = 4;
@@ -182,7 +200,7 @@
             this.BtnFacebook.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.BtnFacebook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnFacebook.Image = ((System.Drawing.Image)(resources.GetObject("BtnFacebook.Image")));
-            this.BtnFacebook.Location = new System.Drawing.Point(57, 376);
+            this.BtnFacebook.Location = new System.Drawing.Point(57, 379);
             this.BtnFacebook.Name = "BtnFacebook";
             this.BtnFacebook.Size = new System.Drawing.Size(36, 36);
             this.BtnFacebook.TabIndex = 3;
@@ -199,7 +217,7 @@
             this.BtnDiscord.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.BtnDiscord.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnDiscord.Image = ((System.Drawing.Image)(resources.GetObject("BtnDiscord.Image")));
-            this.BtnDiscord.Location = new System.Drawing.Point(13, 376);
+            this.BtnDiscord.Location = new System.Drawing.Point(13, 379);
             this.BtnDiscord.Name = "BtnDiscord";
             this.BtnDiscord.Size = new System.Drawing.Size(36, 36);
             this.BtnDiscord.TabIndex = 2;
@@ -275,24 +293,6 @@
             this.BtnMinimize.TabIndex = 3;
             this.BtnMinimize.UseVisualStyleBackColor = false;
             this.BtnMinimize.Click += new System.EventHandler(this.BtnMinimize_Click);
-            // 
-            // BtnLimpar
-            // 
-            this.BtnLimpar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.BtnLimpar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnLimpar.FlatAppearance.BorderSize = 2;
-            this.BtnLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnLimpar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnLimpar.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.BtnLimpar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnLimpar.Location = new System.Drawing.Point(12, 296);
-            this.BtnLimpar.Name = "BtnLimpar";
-            this.BtnLimpar.Size = new System.Drawing.Size(176, 40);
-            this.BtnLimpar.TabIndex = 11;
-            this.BtnLimpar.Text = "LIMPAR CACHE";
-            this.BtnLimpar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.BtnLimpar.UseVisualStyleBackColor = true;
-            this.BtnLimpar.Click += new System.EventHandler(this.BtnLimpar_Click);
             // 
             // Form1
             // 

@@ -83,12 +83,12 @@ namespace CampinasLauncher
 
         private void BtnFacebook_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("https://www.facebook.com/");
+            System.Diagnostics.Process.Start("https://www.facebook.com/campinasroleplay");
         }
 
         private void BtnInstagram_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("https://www.instagram.com/");
+            System.Diagnostics.Process.Start("https://www.instagram.com/campinasrp");
         }
 
         private void BtnYoutube_Click(object sender, EventArgs e)
