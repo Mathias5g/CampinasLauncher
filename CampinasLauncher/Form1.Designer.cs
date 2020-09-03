@@ -135,7 +135,7 @@
             this.BtnTeamspeak.Name = "BtnTeamspeak";
             this.BtnTeamspeak.Size = new System.Drawing.Size(176, 40);
             this.BtnTeamspeak.TabIndex = 7;
-            this.BtnTeamspeak.Text = "TEAMSPEAK 3";
+            this.BtnTeamspeak.Text = "TOKOVOIP";
             this.BtnTeamspeak.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.BtnTeamspeak.UseVisualStyleBackColor = true;
             // 

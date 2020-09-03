@@ -1,12 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using fivemLuncher;
+using System.Threading;
+using Microsoft.Win32;
+using System.Linq;
+using System.Diagnostics;
 
 namespace CampinasLauncher
 {
@@ -115,7 +114,66 @@ namespace CampinasLauncher
 
         private void BtnEntrar_Click(object sender, EventArgs e)
         {
-            
+            try
+            {
+                if(checkInstalled("Steam"))
+                {
+
+                    //System.Diagnostics.Process.Start($"steam://");
+
+                    do
+                    {
+                        BtnEntrar.Text = "AGUARDE";
+                    } while (rp.steamhexid() == "steam:0");
+
+
+                    rp.connectFivem("", "");
+
+                } else
+                {
+                    LblVersionNumber.Text = "NÃO TEM";
+                }
+            }
+            catch (Exception)
+            {
+                rp.open("steam.exe");
+            }
+        }
+
+        public static bool checkInstalled(string c_name)
+        {
+            string displayName;
+
+            string registryKey = @"SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall";
+            RegistryKey key = Registry.LocalMachine.OpenSubKey(registryKey);
+            if (key != null)
+            {
+                foreach (RegistryKey subkey in key.GetSubKeyNames().Select(keyName => key.OpenSubKey(keyName)))
+                {
+                    displayName = subkey.GetValue("DisplayName") as string;
+                    if (displayName != null && displayName.Contains(c_name))
+                    {
+                        return true;
+                    }
+                }
+                key.Close();
+            }
+
+            registryKey = @"SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall";
+            key = Registry.LocalMachine.OpenSubKey(registryKey);
+            if (key != null)
+            {
+                foreach (RegistryKey subkey in key.GetSubKeyNames().Select(keyName => key.OpenSubKey(keyName)))
+                {
+                    displayName = subkey.GetValue("DisplayName") as string;
+                    if (displayName != null && displayName.Contains(c_name))
+                    {
+                        return true;
+                    }
+                }
+                key.Close();
+            }
+            return false;
         }
     }
 }
