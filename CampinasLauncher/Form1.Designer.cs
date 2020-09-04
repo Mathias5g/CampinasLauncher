@@ -118,7 +118,7 @@
             this.BtnChangelog.Name = "BtnChangelog";
             this.BtnChangelog.Size = new System.Drawing.Size(176, 40);
             this.BtnChangelog.TabIndex = 8;
-            this.BtnChangelog.Text = "CHANGELOG";
+            this.BtnChangelog.Text = "NOVIDADES";
             this.BtnChangelog.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.BtnChangelog.UseVisualStyleBackColor = true;
             // 

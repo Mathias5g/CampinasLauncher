@@ -6,6 +6,7 @@ using System.Threading;
 using Microsoft.Win32;
 using System.Linq;
 using System.Diagnostics;
+using System.Threading.Tasks;
 
 namespace CampinasLauncher
 {
@@ -35,6 +36,7 @@ namespace CampinasLauncher
 
 
             LblVersionNumber.Text = assemblyVersion;
+
 
             Lang.steamhata = "Abra a Steam primeiro"; //Please firt of open steam.
             Lang.hatalimesajbaslik = "Erro!"; //Error Header Message
@@ -95,10 +97,34 @@ namespace CampinasLauncher
             System.Diagnostics.Process.Start("https://www.youtube.com/");
         }
 
-        private void BtnTeamspeak_Click(object sender, EventArgs e)
+        private async void BtnTeamspeak_Click(object sender, EventArgs e)
         {
-            rp.ts3open("localhost:1111");
-            //System.Diagnostics.Process.Start("https://www.teamspeak.com/pt/downloads/");
+            try
+            {
+                if (CheckInstalled("teamspeak3"))
+                {
+
+                    rp.ts3open("localhost:1111");
+                    do
+                    {
+
+                        BtnTeamspeak.Text = "AGURDADE";
+                        BtnTeamspeak.UseWaitCursor = true;
+                        BtnTeamspeak.Enabled = false;
+                        await PutTaskDelay();
+
+                    } while (rp.steamhexid() == "steam:0");
+
+                }
+                else
+                {
+                    LblVersionNumber.Text = "NÃO TEM";
+                }
+            }
+            catch (Exception)
+            {
+                System.Diagnostics.Process.Start("https://www.teamspeak.com/pt/downloads/");
+            }
         }
 
         private void BtnMinimize_Click(object sender, EventArgs e)
@@ -112,20 +138,23 @@ namespace CampinasLauncher
             form2.Show();
         }
 
-        private void BtnEntrar_Click(object sender, EventArgs e)
+        private async void BtnEntrar_Click(object sender, EventArgs e)
         {
             try
             {
-                if(checkInstalled("Steam"))
+                if(CheckInstalled("Steam"))
                 {
 
-                    //System.Diagnostics.Process.Start($"steam://");
-
+                    System.Diagnostics.Process.Start($"steam://");
                     do
                     {
-                        BtnEntrar.Text = "AGUARDE";
-                    } while (rp.steamhexid() == "steam:0");
 
+                        BtnEntrar.Text = "AGURDADE";
+                        BtnEntrar.UseWaitCursor = true;
+                        BtnEntrar.Enabled = false;
+                        await PutTaskDelay();
+
+                    } while (rp.steamhexid() == "steam:0");
 
                     rp.connectFivem("", "");
 
@@ -140,7 +169,12 @@ namespace CampinasLauncher
             }
         }
 
-        public static bool checkInstalled(string c_name)
+        async Task PutTaskDelay()
+        {
+            await Task.Delay(5000);
+        }
+
+        public static bool CheckInstalled(string c_name)
         {
             string displayName;
 
@@ -175,5 +209,6 @@ namespace CampinasLauncher
             }
             return false;
         }
+
     }
 }
