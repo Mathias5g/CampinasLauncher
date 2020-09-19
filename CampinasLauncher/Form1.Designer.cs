@@ -109,6 +109,7 @@
             // 
             this.BtnChangelog.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.BtnChangelog.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnChangelog.Enabled = false;
             this.BtnChangelog.FlatAppearance.BorderSize = 2;
             this.BtnChangelog.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnChangelog.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -126,6 +127,7 @@
             // 
             this.BtnTeamspeak.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.BtnTeamspeak.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnTeamspeak.Enabled = false;
             this.BtnTeamspeak.FlatAppearance.BorderSize = 2;
             this.BtnTeamspeak.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnTeamspeak.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

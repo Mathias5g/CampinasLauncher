@@ -37,6 +37,7 @@ namespace CampinasLauncher
 
             LblVersionNumber.Text = assemblyVersion;
 
+            
 
             Lang.steamhata = "Abra a Steam primeiro"; //Please firt of open steam.
             Lang.hatalimesajbaslik = "Erro!"; //Error Header Message
@@ -156,7 +157,7 @@ namespace CampinasLauncher
 
                     } while (rp.steamhexid() == "steam:0");
 
-                    rp.connectFivem("", "");
+                    rp.connectFivem("131.196.198.139", "30120");
 
                 } else
                 {
